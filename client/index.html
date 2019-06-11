@@ -63,10 +63,14 @@
     <script>
     
     var n1 = new Negociacao(new Date(), 5, 700); //passar os valores de uma unica vez
-    console.log(n1.getQuantidade());
-    console.log(n1.getData());
-    console.log(n1.getValor());
-    console.log(n1.getVolume());
+    
+    n1.quantidade = 1000; //não consegue alterar :)
+    // n1._quantidade = 111; - ainda consegue alterar :(
+    
+    console.log(n1.quantidade);
+    console.log(n1.data);
+    console.log(n1.valor);
+    console.log(n1.volume);
 
     </script>
 </body>
