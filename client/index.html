@@ -61,22 +61,36 @@
     </script>
 
     <script>
+
+
         // let negociacao = new Proxy(new Negociacao(new Date(), 2, 100), {
-        let lista = new Proxy(new ListaNegociacoes(), {
+        // let lista = new Proxy(new ListaNegociacoes(), {
 
-            // get é chamado sempre que tentar ler uma das props do objeto
-            // set seta
-            set: function (target, prop, value, receiver) {
-                // console.log(`a propriedade "${prop}" foi interceptada`)
-                console.log(`valor anterior: ${target[prop]}, novo valor: ${value}`)
-                return Reflect.set(target, prop, value, receiver)
-            }
-        });
+        //     // get é chamado sempre que tentar ler uma das props do objeto
+        //     // set seta
+        //     //     set: function (target, prop, value, receiver) {
+        //     //         // console.log(`a propriedade "${prop}" foi interceptada`)
+        //     //         console.log(`valor anterior: ${target[prop]}, novo valor: ${value}`)
+        //     //         return Reflect.set(target, prop, value, receiver)
+        //     //     }
+        //     // });
 
-        // negociacao._quantidade = 10
-        // negociacao._valor = 100
+        //     get(target, prop, receiver) {
+        //         if (['adiciona', 'esvazia'].includes(prop) && typeof (target[prop] == typeof (Function))) {
+        //             return function () {
+        //                 console.log(`interceptando ${prop}`)
 
-        lista.adiciona(new Negociacao(new Date(), 1, 100))
+        //                 Reflect.apply(target[prop], target, arguments)
+        //                 self._negociacoesView.update(target)
+        //             }
+        //         }
+
+        //         return Reflect.get(target, prop, receiver)
+        //     }
+        // })
+
+        // lista.adiciona(new Negociacao(new Date(), 1, 100))
+        // lista.esvazia()
 
     </script>
 </body>
