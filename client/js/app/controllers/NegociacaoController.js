@@ -41,7 +41,7 @@ class NegociacaoController {
 
         this._mensagem.texto = "Negociação adicionada com sucesso";
         // this._mensagemView.update(this._mensagem);
-        // this._limpaFormulario();
+        this._limpaFormulario();
 
         console.log(this._listaNegociacoes.negociacoes);
 
