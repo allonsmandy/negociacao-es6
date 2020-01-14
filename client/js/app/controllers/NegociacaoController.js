@@ -32,8 +32,6 @@ class NegociacaoController {
         this._mensagem.texto = "Negociação adicionada com sucesso";
         this._limpaFormulario();
 
-        console.log(this._listaNegociacoes.negociacoes);
-
     }
 
     importaNegociacoes() {
@@ -80,12 +78,10 @@ class NegociacaoController {
     }
 
     ordena(coluna) {
-        if (this._ordemAtual == coluna) {
-            this._listaNegociacoes.inverteOrdem();
-        } else {
-            this._listaNegociacoes.ordena((a, b) => a[coluna] - b[coluna]);
+        if(this._ordemAtual == coluna || this._ordemAtual !== coluna) {
+            this._listaNegociacoes.inverteOrdem(); 
         }
-        this._ordemAtual = coluna;
-    }
 
+        this._ordemAtual = coluna;    
+    }
 }
